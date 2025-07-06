@@ -51,7 +51,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     });
 
     // call api
-    const { data } = await axios.get(`/api/product/${id}/`);
+    const { data } = await API.get(`/api/product/${id}/`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -85,7 +85,7 @@ export const createProduct = (product) => async (dispatch, getState) => {
     };
 
     // api call
-    const { data } = await axios.post("/api/product-create/", product, config);
+    const { data } = await API.post("/api/product-create/", product, config);
 
     dispatch({
       type: CREATE_PRODUCT_SUCCESS,
@@ -122,7 +122,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     };
 
     // api call
-    const { data } = await axios.delete(`/api/product-delete/${id}/`, config);
+    const { data } = await API.delete(`/api/product-delete/${id}/`, config);
 
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -159,7 +159,7 @@ export const updateProduct = (id, product) => async (dispatch, getState) => {
     };
 
     // api call
-    const { data } = await axios.put(
+    const { data } = await API.put(
       `/api/product-update/${id}/`,
       product,
       config
@@ -201,7 +201,7 @@ export const changeDeliveryStatus =
       };
 
       // api call
-      const { data } = await axios.put(
+      const { data } = await API.put(
         `/account/change-order-status/${id}/`,
         product,
         config
