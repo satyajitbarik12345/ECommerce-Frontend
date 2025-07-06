@@ -32,7 +32,7 @@ function NavBar() {
             <marquee
               behavior="scroll"
               direction="left"
-              scrollamount="6"
+              scrollamount="3"
               style={{ color: "red", fontWeight: "bold" }}
             >
               SATYAMEGAMART
