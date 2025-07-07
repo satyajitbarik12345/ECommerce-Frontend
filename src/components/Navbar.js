@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
 import { useHistory } from "react-router-dom";
 import SearchBarForProducts from "./SearchBarForProducts";
-import "./Navbar.css"; // ⬅️ Add this line to import custom styles
+import "../App.css";
 
 function NavBar() {
   let history = useHistory();
