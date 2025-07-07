@@ -5,6 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
 import { useHistory } from "react-router-dom";
 import SearchBarForProducts from "./SearchBarForProducts";
+import "./Navbar.css"; // ⬅️ Add this line to import custom styles
 
 function NavBar() {
   let history = useHistory();
@@ -25,18 +26,9 @@ function NavBar() {
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
-          {/* Brand Name with Marquee */}
-          <Navbar.Brand
-            style={{ overflow: "hidden", whiteSpace: "nowrap", width: "200px" }}
-          >
-            <marquee
-              behavior="scroll"
-              direction="left"
-              scrollamount="3"
-              style={{ color: "red", fontWeight: "bold" }}
-            >
-              SATYAMEGAMART
-            </marquee>
+          {/* Brand Name with Scrolling Text */}
+          <Navbar.Brand className="scrolling-brand">
+            <span className="scrolling-text">SATYAMEGAMART</span>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
