@@ -43,12 +43,12 @@
   float: right;
   color: grey;
   cursor: pointer;
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
 }
 
 .edit-button-css:hover {
   color: #6699ff;
-  transform: scale(1.3)
+  transform: scale(1.3);
 }
 
 .delete-button-css {
@@ -57,12 +57,12 @@
   float: right;
   color: grey;
   cursor: pointer;
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
 }
 
 .delete-button-css:hover {
   color: red;
-  transform: scale(1.3)
+  transform: scale(1.3);
 }
 
 .saved-cards-css {
@@ -83,7 +83,7 @@
   padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
-  /* Height of the footer*/ 
+  /* Height of the footer*/
   height: 40px;
   background: grey;
 }
@@ -94,5 +94,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.scrolling-brand {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 10s linear infinite;
+  font-weight: bold;
+  color: red;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
